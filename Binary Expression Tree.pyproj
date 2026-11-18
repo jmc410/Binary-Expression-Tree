@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>79d68844-a937-4a33-bc81-2c8a9a84f4ff</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Binary_Expression_Tree.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Binary_Expression_Tree.py" />
+    <Compile Include="binary_expression_tree.py" />
+    <Compile Include="test_binary_expression_tree.py" />
     <Compile Include="infix_converter.py" />
     <Compile Include="main.py" />
     <Compile Include="postfix_evaluator.py" />

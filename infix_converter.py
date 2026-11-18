@@ -5,7 +5,7 @@ from stack import Stack
 class InfixToPostfixConverter:
 
     def __init__(self):
-        """Set up the operator precedence rules."""
+        """Setting up the operator precedence rules."""
         self.precedence = {
             "+": 1,
             "-": 1,
@@ -31,19 +31,13 @@ class InfixToPostfixConverter:
         return tokens
 
     def is_operand(self, token):
-        """Checks whether a token is an operand."""
+        """Checks if whether a token is an operand."""
         return re.fullmatch(
             r"[A-Za-z_][A-Za-z0-9_]*|\d+(?:\.\d+)?",
             token
         ) is not None
 
     def convert(self, expression):
-        """
-        Converts an infix expression to postfix notation.
-
-        Raises a ValueError: If the expression is malformed.
-        """
-
         tokens = self.tokenize(expression)
 
         operators = Stack()
@@ -93,7 +87,7 @@ class InfixToPostfixConverter:
 
                 if not found_opening:
                     raise ValueError(
-                        "Mismatched parentheses, missing '('"
+                        "Mismatched parentheses? missing '('"
                     )
 
                 expect_operand = False
@@ -133,7 +127,7 @@ class InfixToPostfixConverter:
 
             if operator == "(":
                 raise ValueError(
-                    "Mismatched parentheses, missing ')'"
+                    "Mismatched parentheses? missing ')'"
                 )
 
             output.append(operator)
@@ -195,7 +189,7 @@ if __name__ == "__main__":
 
         try:
             converter.convert(expression)
-            print("ERROR: Invalid expression accepted:",
+            print("There has been an error, Invalid expression accepted:",
                   expression)
 
         except ValueError as error:
@@ -209,3 +203,7 @@ if __name__ == "__main__":
 
     print("Nested parentheses test passed.")
     print("Converter tests completed!")
+
+
+
+    #reminder -m python 
